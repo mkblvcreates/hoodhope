@@ -57,14 +57,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hoodhope.org/metros/wichita/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hoodhope.org/metros/wichita/resources/</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://hoodhope.org/metros/dallas/</loc>
     <priority>0.7</priority>
   </url>
@@ -78,6 +70,14 @@
   </url>
   <url>
     <loc>https://hoodhope.org/metros/detroit/resources/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hoodhope.org/metros/wichita/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hoodhope.org/metros/wichita/resources/</loc>
     <priority>0.6</priority>
   </url>
   <url>
