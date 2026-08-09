@@ -1,0 +1,397 @@
+# H.O.O.D. Hope Content Manager (Decap CMS)
+#
+# This gives non-technical staff a visual, form-based editor at /admin/ for
+# every piece of editable content on the site — metros, wellness pillars,
+# local resources, leadership, partner types, reports, and the core model
+# content from the brochure. No code, no redesign, no developer needed to
+# add a metro or an initiative.
+#
+# HOW IT WORKS: Decap CMS commits content changes as JSON files directly to
+# this site's Git repository. After a save, re-run `node build.js` (or wire
+# it to your host's auto-deploy hook — see PRODUCTION-CHECKLIST.md) to
+# regenerate the live HTML pages from the updated content.
+#
+# ─── ONE-TIME SETUP REQUIRED BEFORE THIS ADMIN PANEL WORKS ─────────────────
+# 1. Push this site to a Git repository (GitHub is simplest).
+# 2. Deploy it to Netlify (free tier is fine for a site this size).
+# 3. In the Netlify dashboard: Site settings → Identity → Enable Identity,
+#    then Site settings → Identity → Services → Enable Git Gateway.
+# 4. Invite editors under Identity → Invite users. They'll set a password
+#    and can then log in at yoursite.com/admin/ — no GitHub account needed.
+# 5. Replace `repo:` below with this repository's actual "owner/name".
+#
+# Until that setup is complete, editors can still preview the CMS locally:
+# run `npx decap-server` in one terminal and open /admin/ with
+# `local_backend: true` below active.
+# ─────────────────────────────────────────────────────────────────────────
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Uncomment while testing locally with `npx decap-server` (remove/comment
+# out before going live so editors use the real Git Gateway backend).
+# local_backend: true
+
+site_url: https://hoodhope.org
+logo_url: /assets/img/logo-mark.png
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  # ---- Organization-wide settings (single file) ----------------------------
+  - name: "site_settings"
+    label: "Organization Settings"
+    files:
+      - name: "settings"
+        label: "Org Info & Contact"
+        file: "content/site.json"
+        fields:
+          - label: "Organization"
+            name: "org"
+            widget: "object"
+            fields:
+              - { label: "Display Name", name: "name", widget: "string" }
+              - { label: "Legal Name", name: "legalName", widget: "string" }
+              - { label: "Full Name (spelled out)", name: "fullName", widget: "string" }
+              - { label: "Legal Status", name: "legalStatus", widget: "string" }
+              - { label: "Program Name", name: "programName", widget: "string" }
+              - { label: "Platform Tagline", name: "platformTagline", widget: "string" }
+              - { label: "Homepage Tagline", name: "tagline", widget: "string" }
+              - { label: "Hero Statement (large headline)", name: "heroStatement", widget: "string" }
+              - { label: "Hero Sub-statement", name: "heroSub", widget: "text" }
+              - { label: "Mission (long)", name: "mission", widget: "text" }
+              - { label: "Mission (short, for meta/cards)", name: "shortMission", widget: "text" }
+              - { label: "Model Description", name: "model", widget: "text" }
+              - { label: "Model Quote", name: "modelQuote", widget: "string" }
+              - { label: "Tone Words", name: "toneWords", widget: "list" }
+              - { label: "Founded Year", name: "founded", widget: "string", required: false }
+              - { label: "EIN", name: "ein", widget: "string", required: false, hint: "Add once available for financial transparency" }
+              - { label: "HUD Alignment Note", name: "hudNote", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Mailing Address", name: "mailingAddress", widget: "string" }
+              - { label: "Hours Note", name: "hoursNote", widget: "string" }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "X / Twitter", name: "x", widget: "string", required: false }
+
+  # ---- Metros (folder collection — "New Metro" adds one with zero code) ---
+  - name: "metros"
+    label: "Metros"
+    folder: "content/metros"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: "name"
+    summary: "{{name}} — {{launchStatus}}"
+    fields:
+      - { label: "Metro Name", name: "name", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "lowercase-with-dashes, e.g. kansas-city" }
+      - { label: "Rollout Phase", name: "phase", widget: "select", options: [1, 2, 3], hint: "1 = Flagship/Active, 2 = Regional Expansion/Next, 3 = Target/Roadmap" }
+      - { label: "Status Label", name: "launchStatus", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Hero Note", name: "heroNote", widget: "text" }
+      - { label: "Focus Areas", name: "focusAreas", widget: "list", hint: "Must match Wellness Pillar names exactly" }
+      - label: "Local Nonprofit Operator"
+        name: "localPartner"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Organization Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Website", name: "website", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+      - label: "Initiatives"
+        name: "initiatives"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Wellness Pillar", name: "category", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Status", name: "status", widget: "select", options: ["Active pathway", "In development", "Roadmap"] }
+      - label: "Local Resources"
+        name: "resources"
+        widget: "list"
+        required: false
+        hint: "Every resource shown on this metro's live directory & map"
+        fields:
+          - { label: "Organization Name", name: "title", widget: "string" }
+          - { label: "Wellness Pillar (category slug)", name: "category", widget: "string", hint: "economic-stability, education-access, health-care-access, neighborhood-environment, or social-community-context" }
+          - { label: "Eligibility", name: "eligibility", widget: "string", required: false }
+          - { label: "Address", name: "address", widget: "string", required: false }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Website", name: "website", widget: "string", required: false }
+          - { label: "Languages", name: "language", widget: "string", required: false }
+          - { label: "Last Verified Date", name: "lastVerified", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
+          - { label: "Verified? (uncheck for sample/placeholder entries)", name: "verified", widget: "boolean", default: false }
+          - { label: "Map Latitude", name: "lat", widget: "number", value_type: "float", required: false }
+          - { label: "Map Longitude", name: "lng", widget: "number", value_type: "float", required: false }
+          - { label: "Internal Note", name: "note", widget: "text", required: false }
+
+  # ---- Wellness Pillars (folder collection) --------------------------------
+  - name: "wellness_pillars"
+    label: "Wellness Pillars (WEL9)"
+    folder: "content/wellness-pillars"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Display Order", name: "order", widget: "number" }
+      - { label: "Pillar Name", name: "name", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "select", options: ["chart", "graduation", "heart", "home", "people", "shield", "doc", "route", "basket", "check"] }
+      - { label: "Wheel Color (hex)", name: "wheelColor", widget: "color" }
+      - { label: "Short Summary", name: "summary", widget: "text" }
+      - { label: "Full Description", name: "description", widget: "text" }
+      - { label: "Social Determinants of Health Factors", name: "sdohFactors", widget: "list" }
+      - { label: "Served Audiences", name: "servedAudiences", widget: "list" }
+      - { label: "Example Initiatives", name: "exampleInitiatives", widget: "list" }
+
+  # ---- Leadership (single file, repeatable list) ---------------------------
+  - name: "leadership"
+    label: "Leadership"
+    files:
+      - name: "team"
+        label: "Executive Team"
+        file: "content/leadership.json"
+        fields:
+          - { label: "Section Kicker", name: "kicker", widget: "string" }
+          - label: "Team Members"
+            name: "team"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Bio Bullet Points", name: "bullets", widget: "list" }
+
+  # ---- Partner types (single file, repeatable list) ------------------------
+  - name: "partner_types"
+    label: "Partner Types"
+    files:
+      - name: "types"
+        label: "Ways to Partner"
+        file: "content/partners.json"
+        fields:
+          - label: "Partner Types"
+            name: "types"
+            widget: "list"
+            fields:
+              - { label: "Type", name: "type", widget: "string" }
+              - { label: "Audience", name: "audience", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ---- Reports & financial transparency (single file) ----------------------
+  - name: "reports"
+    label: "Reports & Financials"
+    files:
+      - name: "reports"
+        label: "Annual Reports & Financial Transparency"
+        file: "content/reports.json"
+        fields:
+          - label: "Annual Reports"
+            name: "annualReports"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["In development", "Published"] }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "PDF File", name: "fileUrl", widget: "file", required: false }
+          - label: "Financial Transparency"
+            name: "financialTransparency"
+            widget: "object"
+            fields:
+              - { label: "Intro Text", name: "intro", widget: "text" }
+              - { label: "Form 990 File/Link", name: "form990Url", widget: "string", required: false }
+              - { label: "Audit Note", name: "auditNote", widget: "string" }
+          - label: "Research Notes"
+            name: "researchNotes"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Status", name: "status", widget: "select", options: ["In development", "Published"] }
+
+  # ---- Our Model — the brochure content (single file) -----------------------
+  - name: "model"
+    label: "Our Model (Brochure Content)"
+    files:
+      - name: "model"
+        label: "5-Stage Model, WEL9, Licensing, Funding & ROI"
+        file: "content/model.json"
+        fields:
+          - label: "5-Stage Continuum"
+            name: "continuum"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Stages"
+                name: "stages"
+                widget: "list"
+                fields:
+                  - { label: "Stage Number", name: "stage", widget: "number" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Focus", name: "focus", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Detail", name: "detail", widget: "text" }
+              - { label: "Closing Quote", name: "closingQuote", widget: "string" }
+          - label: "Wellness (WEL9)"
+            name: "wellness"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Methodology Name", name: "methodologyName", widget: "string" }
+              - { label: "SDOH Note", name: "sdohNote", widget: "text" }
+          - label: "Licensing Framework"
+            name: "licensing"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Closing Line", name: "closingLine", widget: "string" }
+              - label: "Instruments"
+                name: "instruments"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag", name: "tag", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["doc", "shield", "check"] }
+                  - { label: "Points", name: "points", widget: "list" }
+          - label: "Flagship Partner"
+            name: "flagshipPartner"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Partner Name", name: "name", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Note", name: "note", widget: "text" }
+              - { label: "Website", name: "website", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+          - label: "Market Opportunity"
+            name: "marketOpportunity"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "National Context", name: "nationalContext", widget: "object", fields: [{ label: "Value", name: "value", widget: "string" }, { label: "Label", name: "label", widget: "text" }] }
+              - { label: "Local Crisis", name: "localCrisis", widget: "object", fields: [{ label: "Value", name: "value", widget: "string" }, { label: "Label", name: "label", widget: "text" }] }
+              - { label: "Supply Gap", name: "supplyGap", widget: "object", fields: [{ label: "Value", name: "value", widget: "string" }, { label: "Label", name: "label", widget: "text" }] }
+              - { label: "Focus Areas", name: "focusAreas", widget: "object", fields: [{ label: "Value", name: "value", widget: "string" }, { label: "Label", name: "label", widget: "text" }] }
+          - label: "Projected Impact"
+            name: "projectedImpact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Closing Quote", name: "closingQuote", widget: "string" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Note", name: "note", widget: "text" }
+          - label: "Funding Request"
+            name: "funding"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Total Ask", name: "ask", widget: "string" }
+              - { label: "Ask Label", name: "askLabel", widget: "string" }
+              - { label: "Local Match Amount", name: "localMatch", widget: "string" }
+              - { label: "Local Match Label", name: "localMatchLabel", widget: "string" }
+              - { label: "Families Served", name: "familiesServed", widget: "string" }
+              - { label: "Total Budget", name: "totalBudget", widget: "string" }
+              - label: "Budget Allocation"
+                name: "budgetAllocation"
+                widget: "list"
+                fields:
+                  - { label: "Category", name: "label", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string" }
+                  - { label: "Percent", name: "pct", widget: "number" }
+                  - { label: "Amount", name: "amount", widget: "string" }
+              - { label: "Footnote", name: "note", widget: "text" }
+          - label: "Return on Investment"
+            name: "roi"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Metrics"
+                name: "metrics"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Detail", name: "detail", widget: "string" }
+                  - { label: "Note", name: "note", widget: "text" }
+              - { label: "Closing Line", name: "closingLine", widget: "string" }
+          - label: "National Scalability"
+            name: "scalability"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Asset Flow Model"
+                name: "assetFlow"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Steps", name: "steps", widget: "list" }
+                  - { label: "Note", name: "note", widget: "text" }
+              - label: "Phases"
+                name: "phases"
+                widget: "list"
+                fields:
+                  - { label: "Phase Number", name: "phase", widget: "number" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Status", name: "status", widget: "select", options: ["Active", "Next", "Roadmap"] }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "Positioning (National Housing Platform)"
+            name: "positioning"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Pillars"
+                name: "pillars"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["shield", "doc", "check", "chart"] }
+                  - { label: "Description", name: "description", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "string" }
+              - { label: "Reach Statement", name: "reach", widget: "string" }
+          - label: "Call to Action"
+            name: "callToAction"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Tracks (Invest / Validate / Scale)"
+                name: "tracks"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - { label: "Closing Line", name: "closingLine", widget: "string" }

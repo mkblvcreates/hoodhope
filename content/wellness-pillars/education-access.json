@@ -1,0 +1,12 @@
+{
+  "order": 2,
+  "name": "Education Access",
+  "slug": "education-access",
+  "icon": "graduation",
+  "wheelColor": "#1B2B4B",
+  "summary": "Homeownership Academy, budgeting workshops, and a stable environment for student success.",
+  "description": "Stable housing is the platform for learning. The Homeownership Academy and budgeting workshops build adult financial capability, while housing stability itself creates the consistent environment children need for student success.",
+  "sdohFactors": ["Early Childhood Education", "Literacy", "Language", "Higher Education"],
+  "servedAudiences": ["Program participants and their children", "Adults completing the Homeownership Academy"],
+  "exampleInitiatives": ["Homeownership Academy", "Budgeting workshops", "Stable-housing support for student success"]
+}

@@ -1,0 +1,12 @@
+{
+  "order": 5,
+  "name": "Social & Community Context",
+  "slug": "social-community-context",
+  "icon": "people",
+  "wheelColor": "#C9A227",
+  "summary": "Building support networks, civic engagement, and restoring community trust.",
+  "description": "Long-term stability is built in community. We work through trusted local nonprofit operators — not top-down outsiders — to build support networks, civic engagement, and restore community trust license by license, metro by metro.",
+  "sdohFactors": ["Civic Participation", "Incarceration", "Discrimination"],
+  "servedAudiences": ["Alumni and community reinvestment networks", "Local nonprofit operators and neighborhood partners"],
+  "exampleInitiatives": ["Alumni tracking and community reinvestment", "Local nonprofit operator partnerships", "Civic engagement pathways"]
+}

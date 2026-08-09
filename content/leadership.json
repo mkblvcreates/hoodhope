@@ -1,0 +1,35 @@
+{
+  "kicker": "4 Generations of Real Estate Excellence",
+  "team": [
+    {
+      "name": "Nigel Johnson, MBA",
+      "title": "Founder & Executive Director",
+      "bullets": [
+        "4th Generation Real Estate Investor",
+        "National Author & Certified Affordable Housing Provider",
+        "30+ Years Community Development Experience",
+        "Program Architect"
+      ]
+    },
+    {
+      "name": "Ernest Gauss",
+      "title": "Executive Board Chair",
+      "bullets": [
+        "Strategic Oversight & Funding Coordination",
+        "Generational Wealth Building Expert",
+        "Asset Flow Management",
+        "Governance & Compliance"
+      ]
+    },
+    {
+      "name": "Joshua Kimbrough-El",
+      "title": "Executive Board Vice Chair",
+      "bullets": [
+        "Program Development & Partnership Engagement",
+        "Housing Implementation Specialist",
+        "Operational Strategy",
+        "Community Relations"
+      ]
+    }
+  ]
+}

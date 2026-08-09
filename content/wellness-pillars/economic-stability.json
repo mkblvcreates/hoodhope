@@ -1,0 +1,12 @@
+{
+  "order": 1,
+  "name": "Economic Stability",
+  "slug": "economic-stability",
+  "icon": "chart",
+  "wheelColor": "#3F7D6B",
+  "summary": "Financial literacy, credit repair, and generational wealth building through homeownership.",
+  "description": "Economic stability is the foundation of the WEL9 Methodology. Through the Path to Homeownership ladder, families build financial literacy, repair credit, and move toward generational wealth building — not just a paycheck, but an asset.",
+  "sdohFactors": ["Employment", "Housing Instability", "Poverty", "Food Insecurity"],
+  "servedAudiences": ["Families in Stages 1–4 of the Continuum of Care", "Adults building credit toward homeownership"],
+  "exampleInitiatives": ["Credit repair coaching", "Homeownership Academy financial literacy", "Escrowed equity / work-for-equity tracks"]
+}

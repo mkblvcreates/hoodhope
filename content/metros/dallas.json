@@ -1,0 +1,23 @@
+{
+  "name": "Dallas",
+  "slug": "dallas",
+  "phase": 3,
+  "launchStatus": "Target Metro — National Platform Roadmap",
+  "summary": "A future target metro as H.O.O.D. Hope's licensing model scales toward 150+ metros nationally.",
+  "heroNote": "Dallas is on the national roadmap for Phase 3 expansion — not yet an active license.",
+  "focusAreas": ["Economic Stability", "Education Access"],
+  "initiatives": [],
+  "resources": [
+    {
+      "title": "211 Helpline",
+      "category": "social-community-context",
+      "eligibility": "Open to all residents",
+      "phone": "Dial 2-1-1",
+      "website": "https://www.211.org/",
+      "language": "Multilingual interpretation available",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "note": "H.O.O.D. Hope has not yet licensed an operator in Dallas. This universal helpline is provided in the meantime."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "order": 3,
+  "name": "Health Care Access",
+  "slug": "health-care-access",
+  "icon": "heart",
+  "wheelColor": "#C1544A",
+  "summary": "On-site wellness screenings, mental health support, and navigation to primary care.",
+  "description": "Housing is healthcare. We integrate on-site wellness screenings, mental health support, and navigation to primary care directly into the housing pathway, instead of treating health as a separate system families have to find on their own.",
+  "sdohFactors": ["Access to Health Care", "Access to Primary Care", "Health Literacy"],
+  "servedAudiences": ["Program participants at every Continuum of Care stage", "Families navigating primary and mental health care"],
+  "exampleInitiatives": ["On-site wellness screenings", "Mental health support and referral", "Primary care navigation"]
+}

@@ -1,0 +1,44 @@
+{
+  "types": [
+    {
+      "type": "Local Nonprofit Operators",
+      "audience": "Community organizations with operational capacity, community trust, and mission alignment",
+      "description": "Licensed local implementers of the Continuum of Care model in a metro — following the same M.O.U. / Program License / Services Agreement structure as our St. Louis Flagship, Vision for Children at Risk."
+    },
+    {
+      "type": "Healthcare Organizations",
+      "audience": "Clinics, hospital systems, and behavioral health providers",
+      "description": "Partners who extend preventive care, mental wellness support, and trusted referral pathways into the Health Care Access pillar."
+    },
+    {
+      "type": "Funders & Donors",
+      "audience": "Foundations, institutional funders, and individual donors",
+      "description": "Foundations, institutions, sponsors, and individual donors investing in measurable, evidence-based community impact."
+    },
+    {
+      "type": "Employers",
+      "audience": "Regional and national employers",
+      "description": "Employers building hiring pathways with residents completing career readiness and workforce development programs."
+    },
+    {
+      "type": "Government Agencies",
+      "audience": "City, county, state, and federal partners",
+      "description": "Public-sector partners including courts, referral agencies, HUD-aligned housing agencies, and human services departments seeking a reliable, accountable community partner."
+    },
+    {
+      "type": "Churches & Faith Partners",
+      "audience": "Congregations and faith-based organizations",
+      "description": "Trusted, culturally grounded partners who extend community connection and local support networks."
+    },
+    {
+      "type": "Research & Data Partners",
+      "audience": "Universities and civic research teams",
+      "description": "Universities, healthcare networks, and civic teams supporting evidence-based learning and program evaluation."
+    },
+    {
+      "type": "Volunteers",
+      "audience": "Individuals and community groups",
+      "description": "Individuals and community groups contributing time, skills, and local knowledge to metro-level initiatives."
+    }
+  ]
+}

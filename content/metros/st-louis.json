@@ -1,0 +1,118 @@
+{
+  "name": "St. Louis",
+  "slug": "st-louis",
+  "phase": 1,
+  "launchStatus": "Flagship Metro — Active",
+  "summary": "The proof-of-concept flagship for the Sustainable Wellness Housing Program, implemented with local partner Vision for Children at Risk.",
+  "heroNote": "St. Louis is the flagship, not the gatekeeper — proving the WEL9 methodology before the model licenses nationally.",
+  "focusAreas": ["Economic Stability", "Neighborhood & Environment", "Health Care Access"],
+  "localPartner": {
+    "name": "Vision for Children at Risk",
+    "role": "St. Louis Flagship Implementer",
+    "website": "https://www.visionforchildren.org/",
+    "phone": "(314) 534-6015"
+  },
+  "initiatives": [
+    {
+      "title": "5-Stage Path to Homeownership — St. Louis Cohort",
+      "category": "Economic Stability",
+      "description": "The full Continuum of Care model, from Crisis/Pre-Housing through Ownership/Exit, implemented by Vision for Children at Risk under H.O.O.D. Hope's Program License.",
+      "status": "Active pathway"
+    },
+    {
+      "title": "North City & East St. Louis Focus",
+      "category": "Neighborhood & Environment",
+      "description": "Targeting neighborhoods with high vacancy rates and immense revitalization potential, where 47,000+ extremely low-income households lack affordable housing.",
+      "status": "Active pathway"
+    },
+    {
+      "title": "Homeownership Academy",
+      "category": "Economic Stability",
+      "description": "Financial literacy, credit repair, and budgeting workshops that move families through Stage 2–3 of the Continuum.",
+      "status": "Active pathway"
+    }
+  ],
+  "resources": [
+    {
+      "title": "St. Louis Housing Authority",
+      "category": "neighborhood-environment",
+      "eligibility": "Income-eligible St. Louis City residents; public housing & Housing Choice Voucher (Section 8) waitlists",
+      "address": "3520 Page Blvd, St. Louis, MO 63106",
+      "phone": "(314) 531-4770",
+      "website": "https://www.slha.org/",
+      "language": "English (call for interpretation services)",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 38.6493,
+      "lng": -90.2276,
+      "note": "The public housing agency administering Section 8 / Housing Choice Vouchers and public housing for the City of St. Louis."
+    },
+    {
+      "title": "Better Family Life, Inc. — Housing Counseling",
+      "category": "economic-stability",
+      "eligibility": "Open to St. Louis-area residents; HUD-approved housing counseling",
+      "address": "5415 Page Blvd, St. Louis, MO 63112",
+      "phone": "(314) 367-3440",
+      "website": "https://www.betterfamilylife.org/",
+      "language": "English",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 38.6494,
+      "lng": -90.2531,
+      "note": "HUD-approved housing counseling agency offering pre-purchase, credit, and foreclosure-prevention counseling."
+    },
+    {
+      "title": "Affinia Healthcare",
+      "category": "health-care-access",
+      "eligibility": "Open to all; sliding-fee scale available",
+      "address": "1717 Biddle St, St. Louis, MO 63106",
+      "phone": "(314) 898-1700",
+      "website": "https://affiniahealthcare.org/",
+      "language": "English, Spanish, interpretation available",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 38.6367,
+      "lng": -90.2027,
+      "note": "Federally Qualified Health Center (FQHC) offering primary care, behavioral health, and wellness screenings."
+    },
+    {
+      "title": "St. Louis Area Foodbank",
+      "category": "neighborhood-environment",
+      "eligibility": "Open to income-eligible households across the bi-state region",
+      "address": "70 Corporate Woods Dr, Bridgeton, MO 63044",
+      "phone": "(314) 292-6262",
+      "website": "https://stlfoodbank.org/",
+      "language": "English, Spanish",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 38.7659,
+      "lng": -90.4249,
+      "note": "Feeding America member food bank serving the greater St. Louis bi-state region."
+    },
+    {
+      "title": "Vision for Children at Risk",
+      "category": "social-community-context",
+      "eligibility": "St. Louis families and children; H.O.O.D. Hope Flagship Implementer",
+      "address": "1000 N Vandeventer Ave, St. Louis, MO 63113",
+      "phone": "(314) 534-6015",
+      "website": "https://www.visionforchildren.org/",
+      "language": "English",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 38.6351,
+      "lng": -90.2313,
+      "note": "H.O.O.D. Hope's licensed St. Louis Flagship Implementer — 35+ years serving vulnerable families with wraparound services."
+    },
+    {
+      "title": "211 Helpline — United Way of Greater St. Louis",
+      "category": "social-community-context",
+      "eligibility": "Open to all residents",
+      "phone": "Dial 2-1-1 or (800) 427-4626",
+      "website": "https://211unitedway.org/",
+      "language": "Multilingual interpretation available",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "note": "Free, confidential 24/7 helpline connecting residents to housing, food, utility, and crisis resources."
+    }
+  ]
+}

@@ -1,185 +1,133 @@
-# SOLEA v00 / ORBITL — Agentic Voice AI for SYNERG
+# H.O.O.D. Hope — Production Website
 
-> Voice-first, soul-coded agentic avatar for the WEL + COHESION Synergy Hubs.
-> Realtime voice. Open-cloud LLM. RAG-grounded. Zero OpenAI.
+The website for H.O.O.D. Hope's Sustainable Wellness Housing Program — a national housing
+platform built to be credible with grantmakers and HUD-aligned government partners, trustworthy
+to referral agencies, compelling to donors and volunteers, and clear about the model to everyone
+else. Branding, tone, and program content are sourced directly from the organization's national
+brochure (5-Stage Path to Homeownership, the WEL9 wellness methodology, the licensing framework,
+and the St. Louis Flagship pilot's real market data, budget, and ROI).
 
-## Stack
+## Why this is a static site with a Git-based CMS, not Next.js + a hosted CMS
 
-| Layer | Service |
-|---|---|
-| Realtime audio room | **LiveKit Cloud** |
-| STT / TTS | **LiveKit Cloud Inference** (Deepgram + Cartesia) |
-| LLM | **Cloudflare Workers AI** — `@cf/meta/llama-3.1-8b-instruct` |
-| Embeddings | **Cloudflare Workers AI** — `@cf/baai/bge-base-en-v1.5` (768-dim) |
-| Vector DB | **Qdrant Cloud** — collection `mkblv_knowledge` |
-| Session log + directives | **Supabase** (Postgres) |
-| Frontend | **Next.js 14 + Tailwind** — `/orbitl/solea` |
+The original handoff recommended Next.js. This build environment's package registry (npmjs.org)
+isn't reachable, so a framework install wasn't possible here. Instead this is a **dependency-free
+static site generator** (`node build.js`) paired with **Decap CMS**, a free, open-source, Git-based
+content manager that needs no database and no custom backend — just a Git repository and (for the
+easiest setup) a free Netlify account for login/identity.
 
-Service keys for LiveKit, Cloudflare, Qdrant, and Supabase are **server-side only**.
-The browser only ever sees a short-lived LiveKit participant JWT.
+This is a legitimate, HUD-appropriate production architecture: no vendor lock-in, no monthly CMS
+fee, content lives in plain JSON files an editor never has to touch directly, and any developer
+(or Claude, again) can pick this up later with zero framework lock-in.
 
-## Repo layout
+## Non-technical content editing (the CMS)
 
-```
-solea-v00/
-├── agent/                  # Python LiveKit Agent (solea-orbitl-v00)
-├── cloudflare-worker/      # Workers AI + Qdrant RAG edge service
-├── web/                    # Next.js SYNERG webapp + /orbitl/solea
-├── supabase/schema.sql     # Postgres schema
-└── README.md
-```
+Visit `/admin/` on the deployed site to add or edit:
 
-## Architecture flow
+- **Metros** — add a new metro with zero code changes (folder collection)
+- **Wellness Pillars (WEL9)** — add or edit a pillar
+- **Local Resources & Initiatives** — nested inside each metro's entry
+- **Leadership**, **Partner Types**, **Reports & Financials**, **Organization Settings**, and the
+  full **Our Model** brochure content (5-Stage Continuum, licensing framework, funding, ROI)
 
-```
-Browser ── POST /api/livekit-token ──▶ Next.js
-   │           returns JWT + ws url + room
-   ▼
-LiveKit Cloud room  ◀── dispatches ──  solea-orbitl-v00 agent
-   │                                    │
-   │  user audio ──▶ STT (Deepgram)     │
-   │                                    ▼
-   │                          custom llm_node
-   │                                    │
-   │                                    ▼
-   │              Cloudflare Worker  /solea/respond
-   │                  │  embed(user_msg) ──▶ Qdrant (mkblv_knowledge)
-   │                  │  build system_prompt + context
-   │                  └─ Workers AI Llama 3.1 8B ──▶ { spoken, directive }
-   │                                    │
-   │  spoken ──▶ TTS (Cartesia) ──▶ user
-   │                                    │
-   │                          if directive: POST  Next.js
-   │                                          /api/orbitl/directives
-   │                                                │
-   │                                                ▼
-   │                                            Supabase
-```
+One-time setup required before `/admin/` works for real editors — see **PRODUCTION-CHECKLIST.md**.
+Until then, anyone can still edit the JSON files in `/content` directly and re-run `node build.js`.
 
----
+## Requirements
 
-## Setup
+Node.js only — no `npm install` needed. The site itself uses zero external packages. (Decap CMS
+and Leaflet/OpenStreetMap load from CDN in the browser, not from this build.)
 
-### 1) LiveKit Cloud
-
-1. Create a project at https://cloud.livekit.io.
-2. Copy `LIVEKIT_URL` (wss://…), `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET`.
-3. Enable **LiveKit Inference** in the project (STT/TTS billed through LiveKit).
-
-### 2) Supabase
-
-1. Create a project at https://supabase.com.
-2. Open SQL editor, paste `supabase/schema.sql`, run it.
-3. Copy `SUPABASE_URL` and the **service_role** key (Project Settings → API).
-   *Never* put the service role key in the browser.
-
-### 3) Qdrant Cloud
-
-1. Create a cluster at https://cloud.qdrant.io.
-2. Copy the cluster URL and an API key.
-3. Create the collection (768-dim, Cosine — matches BGE-base):
-
-   ```bash
-   curl -X PUT "$QDRANT_URL/collections/mkblv_knowledge" \
-     -H "api-key: $QDRANT_API_KEY" \
-     -H "content-type: application/json" \
-     -d '{"vectors":{"size":768,"distance":"Cosine"}}'
-   ```
-
-### 4) Cloudflare Worker (LLM + RAG)
+## How to build
 
 ```bash
-cd cloudflare-worker
-npm i
-cp .dev.vars.example .dev.vars   # fill in
-npx wrangler secret put QDRANT_URL
-npx wrangler secret put QDRANT_API_KEY
-npx wrangler secret put INDEX_TOKEN          # any random string
-npx wrangler secret put SHARED_TOKEN         # optional, for /solea/respond
-npx wrangler deploy
+node build.js
 ```
 
-Note the deployed URL (e.g. `https://solea-worker.you.workers.dev`).
+Regenerates every HTML page from `/content` (CMS-editable) and `/data` (code-level structure)
+through the templates in `/lib`. Run this after any content or code change.
 
-Seed the knowledge base:
+## How to preview locally
+
+Open `index.html` directly in a browser, or serve the folder with any static server:
 
 ```bash
-WORKER_URL=https://solea-worker.you.workers.dev \
-INDEX_TOKEN=your-index-token \
-bash seed_knowledge.sh
+npx serve .
 ```
 
-### 5) LiveKit Agent
+## Project structure
 
-```bash
-cd agent
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-# Fill in:
-#   LIVEKIT_URL / LIVEKIT_API_KEY / LIVEKIT_API_SECRET
-#   CF_WORKER_URL  (your deployed worker)
-#   CF_WORKER_TOKEN  (only if you set SHARED_TOKEN above)
-#   SYNERG_BASE_URL  (your Next.js URL — http://localhost:3000 for dev)
-#   SYNERG_DIRECTIVE_TOKEN  (must match the web app's value, if set)
+```
+content/                 CMS-editable content (what /admin/ writes to)
+  site.json               Org identity, mission, contact, social
+  model.json               5-Stage Continuum, WEL9, licensing, funding, ROI — from the brochure
+  leadership.json          Executive team bios
+  partners.json            Partner type descriptions
+  reports.json              Annual reports + financial transparency + research notes
+  metros/                  One JSON file per metro (initiatives + local resources nested inside)
+  wellness-pillars/         One JSON file per WEL9 pillar
 
-# Dev mode (hot reload, connects to LiveKit Cloud):
-python agent.py dev
+data/                     Code-level loaders — read /content, shaped for the templates
+  site.js, model.js, leadership.js, partners.js, reports.js   → thin passthroughs of /content
+  metros.js, impactCategories.js                              → read every file in a /content folder
+  resources.js                                                → flattens resources out of every metro
+  formSchema.js                                                → form field definitions (code-level)
 
-# Production mode:
-python agent.py start
+lib/                      Templates (dependency-free "components")
+  ui.js                    Header, Footer, Hero, wellness wheel, metro selector, forms, etc.
+  layout.js                 Page shell: <head>, meta tags, JSON-LD, Leaflet include when needed
+  icons.js                   Inline SVG icon set
+  pages/                     One file per route
+
+assets/
+  css/styles.css            Full design system — navy/gold/cream brand, Playfair Display +
+                             Poppins, WCAG AA contrast-checked
+  js/main.js                 Mobile nav, metro tabs, 5-stage stepper, WEL9 wheel, resource
+                             filters + live map, donation presets, form validation
+  img/logo-mark.png          Real logo, extracted from the brochure
+  img/hero-community.jpg     Real hero image, extracted from the brochure
+
+admin/
+  index.html, config.yml    Decap CMS — see PRODUCTION-CHECKLIST.md for setup
+
+<route>/index.html         Generated output (clean URLs, e.g. /model/)
+sitemap.xml, robots.txt     Generated SEO files
+PRODUCTION-CHECKLIST.md      What must be connected/verified before public launch
 ```
 
-Containerize with the included `Dockerfile` and deploy to Fly.io, Railway,
-Render, Cloud Run — anywhere that runs a long-lived outbound WebSocket process.
+## Routes built
 
-### 6) Next.js webapp
-
-```bash
-cd web
-npm i
-cp .env.example .env.local   # fill in LiveKit + Supabase
-npm run dev
+```
+/                    /model/                              /metros/
+/find-help/          /impact/                              /metros/st-louis/
+/partners/           /impact/economic-stability/            /metros/st-louis/resources/  (live map)
+/donate/             /impact/education-access/              /metros/wichita/(...)
+/volunteer/          /impact/health-care-access/            /metros/kansas-city/(...)
+/reports/            /impact/neighborhood-environment/      /metros/dallas/(...)
+/about/              /impact/social-community-context/      /metros/detroit/(...)
+/contact/
+/admin/               (Content Manager / CMS)
+/404.html
 ```
 
-Open http://localhost:3000/orbitl/solea.
+## Interactive components
 
-### 7) Test the loop
+- **5-Stage Path to Homeownership** — accordion stepper (homepage teaser + full version on `/model/`)
+- **WEL9 wellness wheel** — clickable SVG pie chart mapped to the Social Determinants of Health
+- **Metro selector tabs**, **mobile nav**, **donation amount presets**
+- **Resource directory** — category/status filters, list ↔ map toggle
+- **Live resource map** — Leaflet + OpenStreetMap (no API key required), real geocoded pins for
+  every verified St. Louis and Wichita resource
+- **Forms** — Find Help, Partner Inquiry, Volunteer, Donate, Contact — client-side validation,
+  accessible error states, `aria-live` success messaging
 
-1. Click **INITIATE SOLEA**. Grant mic access.
-2. The terminal connects to the LiveKit room. SOLEA dispatches and greets you.
-3. Speak: *"SOLEA, log a directive to schedule the Memphis hub gathering for next Saturday."*
-4. SOLEA reflects, asks at most one question, and routes the directive.
-5. The directive appears in the **DIRECTIVE LOG** panel (polls every 5s) and in
-   the `orbitl_directives` table in Supabase with `status='pending'`,
-   `approval_required=true`.
+## Real, verified local resources
 
-## Success criteria — v00
-
-- [x] Browser joins LiveKit room
-- [x] SOLEA greets user
-- [x] User voice transcribed (Deepgram via LiveKit Inference)
-- [x] Cloudflare Worker returns SOLEA response (RAG-grounded)
-- [x] SOLEA speaks response (Cartesia via LiveKit Inference)
-- [x] Directives stored in Supabase with `approval_required=true`
-- [x] **No OpenAI API key anywhere in the stack**
-
-## Persona — SOLEA
-
-Soultress-coded. Airy yet hearty. Ambient, soulful, feminine-coded. Calm,
-magnetic, emotionally intelligent — never a comfort bot, never therapeutic,
-never mystical, never generic. Speaks with warmth, spaciousness, precision,
-and civic/creator-grade intelligence.
-
-She reflects intent in one grounded line, asks at most one critical question,
-and routes an ORBITL directive when there is enough context. Replies are kept
-short enough to speak aloud naturally (1–3 sentences).
-
-## Roadmap → v01
-
-- Persist transcripts to `solea_transcripts` via a LiveKit data-channel listener.
-- Streaming token output from the Worker (SSE) wired into `llm_node` yields.
-- Approval UI inside the terminal — approve/reject directives inline.
-- Auth gating on `/orbitl/solea` (Supabase Auth).
-- Multi-hub routing (which COHESION node the directive belongs to).
-# hoodhope
+St. Louis and Wichita resource directories are populated with real, publicly verifiable
+organizations (public housing authorities, HUD-approved housing counseling agencies, federally
+qualified health centers, Feeding America food banks, and 211 helplines) gathered via web
+research, each with a `lastVerified` date. Map pin coordinates are best-estimate geocoding — spot
+check against each organization's official listing before treating this as a finished public
+resource (see PRODUCTION-CHECKLIST.md). Kansas City, Dallas, and Detroit are Phase 3 target
+metros with no active H.O.O.D. Hope license yet, so their directories intentionally show only the
+universal 211 helpline until each metro launches — this matches the brochure's real phased
+rollout instead of overclaiming readiness.

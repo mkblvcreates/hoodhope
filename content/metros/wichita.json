@@ -1,0 +1,89 @@
+{
+  "name": "Wichita",
+  "slug": "wichita",
+  "phase": 2,
+  "launchStatus": "Phase 2 — Regional Expansion",
+  "summary": "The next stop on the roadmap: testing the portability of the licensing framework and operational guardrails outside the flagship market.",
+  "heroNote": "Wichita is where H.O.O.D. Hope proves the model travels — replicating the licensing framework beyond its flagship city.",
+  "focusAreas": ["Neighborhood & Environment", "Health Care Access", "Social & Community Context"],
+  "initiatives": [
+    {
+      "title": "Licensing Framework Replication Pilot",
+      "category": "Social & Community Context",
+      "description": "Testing the M.O.U., Program License, and Services Agreement structure with a local nonprofit operator in the Wichita market.",
+      "status": "In development"
+    },
+    {
+      "title": "Local Resource Directory Launch",
+      "category": "Neighborhood & Environment",
+      "description": "Building a verified local resource directory — housing authority, HUD-approved counseling, health, and food access partners — ahead of program launch.",
+      "status": "In development"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Wichita Housing Authority",
+      "category": "neighborhood-environment",
+      "eligibility": "Income-eligible Wichita residents; public housing & Housing Choice Voucher waitlists",
+      "address": "455 N Main St, Wichita, KS 67202",
+      "phone": "(316) 462-3700",
+      "website": "https://www.wichita.gov/263/Housing-Community-Services",
+      "language": "English (call for interpretation services)",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 37.6934,
+      "lng": -97.3375,
+      "note": "City of Wichita Housing & Community Services — the public housing agency for Wichita."
+    },
+    {
+      "title": "Urban League of Kansas — Housing Counseling",
+      "category": "economic-stability",
+      "eligibility": "Open to Wichita-area residents; HUD-approved housing counseling",
+      "phone": "(316) 512-1071",
+      "website": "https://www.kansasul.org/",
+      "language": "English, Spanish",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "note": "HUD-approved housing counseling agency offering pre-purchase education, financial management, and mortgage default counseling. (Street address pending confirmation.)"
+    },
+    {
+      "title": "HealthCore Clinic",
+      "category": "health-care-access",
+      "eligibility": "Open to all; sliding-fee scale available",
+      "address": "2707 E 21st St N, Wichita, KS 67214",
+      "phone": "(316) 691-0249",
+      "website": "https://healthcoreclinic.org/",
+      "language": "English, Spanish",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 37.7168,
+      "lng": -97.3103,
+      "note": "Federally Qualified Health Center (FQHC) offering primary care and behavioral health services."
+    },
+    {
+      "title": "Kansas Food Bank",
+      "category": "neighborhood-environment",
+      "eligibility": "Open to income-eligible households across Kansas",
+      "address": "1919 E Douglas Ave, Wichita, KS 67211",
+      "phone": "(316) 265-3663",
+      "website": "https://kansasfoodbank.org/",
+      "language": "English, Spanish",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "lat": 37.6858,
+      "lng": -97.316,
+      "note": "Feeding America member food bank serving Wichita and the state of Kansas."
+    },
+    {
+      "title": "211 Kansas — United Way of the Plains",
+      "category": "social-community-context",
+      "eligibility": "Open to all residents",
+      "phone": "Dial 2-1-1 or (888) 413-4327",
+      "website": "https://www.211kansas.org/",
+      "language": "Multilingual interpretation available",
+      "lastVerified": "2026-07-30",
+      "verified": true,
+      "note": "Free, confidential helpline connecting Kansas residents to housing, food, and community resources."
+    }
+  ]
+}

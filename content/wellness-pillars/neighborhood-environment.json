@@ -1,0 +1,12 @@
+{
+  "order": 4,
+  "name": "Neighborhood & Environment",
+  "slug": "neighborhood-environment",
+  "icon": "home",
+  "wheelColor": "#4E86A4",
+  "summary": "Safe, quality housing, lead-free environments, and community revitalization.",
+  "description": "The physical quality of housing and neighborhood shapes every other outcome. Our program-controlled units and licensing standards require safe, quality, lead-free housing — paired with a focus on revitalizing high-vacancy neighborhoods rather than displacing residents.",
+  "sdohFactors": ["Access to Healthy Foods", "Quality of Housing", "Crime and Violence", "Environmental Conditions"],
+  "servedAudiences": ["Residents in Stage 1–2 program-controlled units", "Neighborhoods targeted for revitalization"],
+  "exampleInitiatives": ["Program-controlled unit standards", "Lead-free housing requirements", "Neighborhood revitalization focus areas"]
+}

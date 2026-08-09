@@ -1,0 +1,23 @@
+{
+  "annualReports": [
+    {
+      "title": "H.O.O.D. Hope Annual Report",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Our first formal annual report is in development alongside the St. Louis Flagship pilot launch. It will include program reach, audited financials, and pilot outcomes.",
+      "fileUrl": ""
+    }
+  ],
+  "financialTransparency": {
+    "intro": "H.O.O.D. Hope is committed to public financial accountability as the St. Louis Flagship pilot launches and the platform scales. The St. Louis Flagship budget allocation below is drawn directly from our funding prospectus; independent audit figures will be added once available.",
+    "form990Url": "",
+    "auditNote": "Independent audit and Form 990 will be linked here once available."
+  },
+  "researchNotes": [
+    {
+      "title": "The WEL9 Methodology & Social Determinants of Health",
+      "summary": "A research note connecting the WEL9 wellness methodology to the Social Determinants of Health evidence base (in development).",
+      "status": "In development"
+    }
+  ]
+}
