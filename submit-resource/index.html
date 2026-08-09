@@ -140,7 +140,7 @@
   <label for="resource-submission-form-metro">Metro area *</label>
   <select id="resource-submission-form-metro" name="metro" required aria-required="true">
     <option value="">Select an option</option>
-    <option value="st-louis">St. Louis</option><option value="wichita">Wichita</option><option value="dallas">Dallas</option><option value="detroit">Detroit</option><option value="kansas-city">Kansas City</option>
+    <option value="kansas-city">Kansas City</option><option value="st-louis">St. Louis</option><option value="wichita">Wichita</option><option value="dallas">Dallas</option><option value="detroit">Detroit</option>
   </select>
 </div>
 
@@ -243,7 +243,9 @@
     <p class="footer-legal">501(c)(3) nonprofit organization. A licensed national housing platform, architected to scale across 150+ metros.</p>
   </div>
 </footer>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   
   <script src="/assets/js/main.js" defer></script>
+  <script>if(window.netlifyIdentity){window.netlifyIdentity.on("init",function(u){if(!u){window.netlifyIdentity.on("login",function(){document.location.href="/admin/"})}})}</script>
 </body>
 </html>
