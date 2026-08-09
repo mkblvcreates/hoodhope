@@ -31,6 +31,7 @@ const volunteerPage = require("./lib/pages/volunteer");
 const reportsPage = require("./lib/pages/reports");
 const aboutPage = require("./lib/pages/about");
 const contactPage = require("./lib/pages/contact");
+const submitResource = require("./lib/pages/submitResource");
 const notFoundPage = require("./lib/pages/notFound");
 
 function writeFile(relativePath, contents) {
@@ -173,6 +174,20 @@ render(
   partnersPage
 );
 track("/partners/", "0.9");
+
+// ---- Submit Resource --------------------------------------------------------
+render(
+  "submit-resource",
+  {
+    title: "Submit a Resource",
+    description:
+      "Service providers and community organizations: submit your organization for inclusion in the H.O.O.D. Hope resource directory.",
+    path: "/submit-resource/",
+    activeNav: "/partners/",
+  },
+  submitResource
+);
+track("/submit-resource/", "0.6");
 
 // ---- Donate -----------------------------------------------------------------
 render(

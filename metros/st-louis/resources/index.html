@@ -83,11 +83,15 @@
 
 <section class="section section-tint">
   <div class="resource-toolbar" data-resource-toolbar>
+    <div class="resource-toolbar-search">
+      <label for="filter-search-st-louis">Search resources</label>
+      <input type="search" id="filter-search-st-louis" data-filter-search placeholder="Search by name, service, or address…" autocomplete="off" />
+    </div>
     <div>
       <label for="filter-category-st-louis">Filter by category</label>
       <select id="filter-category-st-louis" data-filter-category>
         <option value="">All categories</option>
-        <option value="neighborhood-environment">Neighborhood & Environment</option><option value="economic-stability">Economic Stability</option><option value="health-care-access">Health Care Access</option><option value="social-community-context">Social & Community Context</option>
+        <option value="economic-stability">Economic Stability</option><option value="education-access">Education Access</option><option value="food-nutrition">Food & Nutrition</option><option value="health-care-access">Health Care Access</option><option value="neighborhood-environment">Neighborhood & Environment</option><option value="social-community-context">Social & Community Context</option>
       </select>
     </div>
     <div>
@@ -105,7 +109,7 @@
     <button type="button" class="is-active" data-view-toggle="list">List</button>
     <button type="button" data-view-toggle="map">Map</button>
   </div>
-  <div class="resource-map" id="resource-map-st-louis" data-resource-map data-map-points='[{"id":"resource-0","title":"St. Louis Housing Authority","lat":38.6493,"lng":-90.2276,"address":"3520 Page Blvd, St. Louis, MO 63106","category":"neighborhood-environment"},{"id":"resource-1","title":"Better Family Life, Inc. — Housing Counseling","lat":38.6494,"lng":-90.2531,"address":"5415 Page Blvd, St. Louis, MO 63112","category":"economic-stability"},{"id":"resource-2","title":"Affinia Healthcare","lat":38.6367,"lng":-90.2027,"address":"1717 Biddle St, St. Louis, MO 63106","category":"health-care-access"},{"id":"resource-3","title":"St. Louis Area Foodbank","lat":38.7659,"lng":-90.4249,"address":"70 Corporate Woods Dr, Bridgeton, MO 63044","category":"neighborhood-environment"},{"id":"resource-4","title":"Vision for Children at Risk","lat":38.6351,"lng":-90.2313,"address":"1000 N Vandeventer Ave, St. Louis, MO 63113","category":"social-community-context"}]' hidden></div>
+  <div class="resource-map" id="resource-map-st-louis" data-resource-map data-map-points='[{"id":"resource-0","title":"St. Louis Housing Authority","lat":38.6493,"lng":-90.2276,"address":"3520 Page Blvd, St. Louis, MO 63106","category":"neighborhood-environment"},{"id":"resource-1","title":"Beyond Housing","lat":38.7065,"lng":-90.3123,"address":"6506 Wright Way, St. Louis, MO 63121","category":"neighborhood-environment"},{"id":"resource-2","title":"Habitat for Humanity Saint Louis","lat":38.6059,"lng":-90.2325,"address":"3830 S Grand Blvd, St. Louis, MO 63118","category":"neighborhood-environment"},{"id":"resource-3","title":"Better Family Life, Inc. — Housing Counseling","lat":38.6494,"lng":-90.2531,"address":"5415 Page Blvd, St. Louis, MO 63112","category":"economic-stability"},{"id":"resource-4","title":"St. Louis Community Credit Union","lat":38.6363,"lng":-90.2419,"address":"3651 Forest Park Ave, St. Louis, MO 63108","category":"economic-stability"},{"id":"resource-5","title":"Metropolitan St. Louis Equal Housing and Opportunity Council (EHOC)","lat":38.6318,"lng":-90.2316,"address":"1027 S Vandeventer Ave, Suite 700, St. Louis, MO 63110","category":"economic-stability"},{"id":"resource-6","title":"Affinia Healthcare","lat":38.6367,"lng":-90.2027,"address":"1717 Biddle St, St. Louis, MO 63106","category":"health-care-access"},{"id":"resource-7","title":"Behavioral Health Network of Greater St. Louis","lat":38.6142,"lng":-90.2318,"address":"1905 S Grand Blvd, St. Louis, MO 63104","category":"health-care-access"},{"id":"resource-8","title":"Family Care Health Centers","lat":38.6308,"lng":-90.2456,"address":"4352 Manchester Ave, St. Louis, MO 63110","category":"health-care-access"},{"id":"resource-9","title":"St. Louis Area Foodbank","lat":38.7659,"lng":-90.4249,"address":"70 Corporate Woods Dr, Bridgeton, MO 63044","category":"food-nutrition"},{"id":"resource-10","title":"Operation Food Search","lat":38.6762,"lng":-90.3515,"address":"1644 Lotsie Blvd, St. Louis, MO 63132","category":"food-nutrition"},{"id":"resource-11","title":"St. Louis Public Schools — Early Childhood Education","lat":38.6334,"lng":-90.1918,"address":"801 N 11th St, St. Louis, MO 63101","category":"education-access"},{"id":"resource-12","title":"St. Louis Public Library — Adult Education & Literacy","lat":38.6292,"lng":-90.2003,"address":"1301 Olive St, St. Louis, MO 63103","category":"education-access"},{"id":"resource-13","title":"Urban League of Metropolitan St. Louis — Education & Workforce","lat":38.6433,"lng":-90.2337,"address":"3701 Grandel Square, St. Louis, MO 63108","category":"education-access"},{"id":"resource-14","title":"YMCA of Greater St. Louis — Youth Development","lat":38.631,"lng":-90.2005,"address":"1528 Locust St, St. Louis, MO 63103","category":"education-access"},{"id":"resource-15","title":"Vision for Children at Risk","lat":38.6351,"lng":-90.2313,"address":"1000 N Vandeventer Ave, St. Louis, MO 63113","category":"social-community-context"},{"id":"resource-16","title":"Grace Hill Settlement House","lat":38.6476,"lng":-90.2066,"address":"2600 Hadley St, St. Louis, MO 63106","category":"social-community-context"},{"id":"resource-17","title":"International Institute of St. Louis","lat":38.6072,"lng":-90.2312,"address":"3401 Arsenal St, St. Louis, MO 63118","category":"social-community-context"}]' hidden></div>
   <p class="map-fallback-note">Map pin locations are best-estimate geocoding — confirm the exact address before visiting. Powered by OpenStreetMap contributors.</p>
 
   <div class="resource-list" data-resource-list>
@@ -126,7 +130,39 @@
   <a class="card-link" href="https://www.slha.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
 </article>
 
-<article class="resource-card" id="resource-1" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="38.6494" data-lng="-90.2531">
+<article class="resource-card" id="resource-1" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="38.7065" data-lng="-90.3123">
+  <div class="resource-card-top">
+    <h3>Beyond Housing</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Community development organization focused on housing stabilization, neighborhood revitalization, and building strong communities in North St. Louis County.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 533-0600</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 6506 Wright Way, St. Louis, MO 63121</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.beyondhousing.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-2" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="38.6059" data-lng="-90.2325">
+  <div class="resource-card-top">
+    <h3>Habitat for Humanity Saint Louis</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Builds and repairs homes alongside families in need across the St. Louis metro. Offers homeownership programs, repair assistance, and ReStore operations.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 371-0400</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3830 S Grand Blvd, St. Louis, MO 63118</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://habitatstl.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-3" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="38.6494" data-lng="-90.2531">
   <div class="resource-card-top">
     <h3>Better Family Life, Inc. — Housing Counseling</h3>
     <span class="badge badge-green">Verified</span>
@@ -142,7 +178,39 @@
   <a class="card-link" href="https://www.betterfamilylife.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
 </article>
 
-<article class="resource-card" id="resource-2" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="38.6367" data-lng="-90.2027">
+<article class="resource-card" id="resource-4" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="38.6363" data-lng="-90.2419">
+  <div class="resource-card-top">
+    <h3>St. Louis Community Credit Union</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Community development financial institution (CDFI) offering affordable banking, savings programs, credit-builder loans, and financial literacy workshops.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Economic Stability</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 534-7610</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3651 Forest Park Ave, St. Louis, MO 63108</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://stlouiscommunity.com/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-5" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="38.6318" data-lng="-90.2316">
+  <div class="resource-card-top">
+    <h3>Metropolitan St. Louis Equal Housing and Opportunity Council (EHOC)</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Fair housing enforcement, testing, education, and advocacy. Helps residents understand their rights and file discrimination complaints.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Economic Stability</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 534-5800</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1027 S Vandeventer Ave, Suite 700, St. Louis, MO 63110</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.ehocstl.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-6" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="38.6367" data-lng="-90.2027">
   <div class="resource-card-top">
     <h3>Affinia Healthcare</h3>
     <span class="badge badge-green">Verified</span>
@@ -158,14 +226,46 @@
   <a class="card-link" href="https://affiniahealthcare.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
 </article>
 
-<article class="resource-card" id="resource-3" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="38.7659" data-lng="-90.4249">
+<article class="resource-card" id="resource-7" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="38.6142" data-lng="-90.2318">
+  <div class="resource-card-top">
+    <h3>Behavioral Health Network of Greater St. Louis</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Comprehensive behavioral health services including substance use treatment, mental health counseling, crisis services, and peer support.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Health Care Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 449-8300</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1905 S Grand Blvd, St. Louis, MO 63104</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.bfrp.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-8" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="38.6308" data-lng="-90.2456">
+  <div class="resource-card-top">
+    <h3>Family Care Health Centers</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>FQHC providing primary care, dental, vision, behavioral health, and WIC services to underserved communities in South St. Louis.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Health Care Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 652-5100</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 4352 Manchester Ave, St. Louis, MO 63110</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Bosnian, Spanish, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.familycarehealthcenters.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-9" data-resource-card data-category="food-nutrition" data-verified="verified" data-lat="38.7659" data-lng="-90.4249">
   <div class="resource-card-top">
     <h3>St. Louis Area Foodbank</h3>
     <span class="badge badge-green">Verified</span>
   </div>
-  <p>Feeding America member food bank serving the greater St. Louis bi-state region.</p>
+  <p>Feeding America member food bank serving the greater St. Louis bi-state region. Operates mobile markets, senior food boxes, and coordinates 600+ partner agencies.</p>
   <div class="resource-meta">
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Food & Nutrition</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 292-6262</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 70 Corporate Woods Dr, Bridgeton, MO 63044</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
@@ -174,7 +274,87 @@
   <a class="card-link" href="https://stlfoodbank.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
 </article>
 
-<article class="resource-card" id="resource-4" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="38.6351" data-lng="-90.2313">
+<article class="resource-card" id="resource-10" data-resource-card data-category="food-nutrition" data-verified="verified" data-lat="38.6762" data-lng="-90.3515">
+  <div class="resource-card-top">
+    <h3>Operation Food Search</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Food rescue and distribution nonprofit providing 28M+ meals annually through 330+ community partners. Offers nutrition education and SNAP application assistance.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Food & Nutrition</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 726-5355</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1644 Lotsie Blvd, St. Louis, MO 63132</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.operationfoodsearch.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-11" data-resource-card data-category="education-access" data-verified="verified" data-lat="38.6334" data-lng="-90.1918">
+  <div class="resource-card-top">
+    <h3>St. Louis Public Schools — Early Childhood Education</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Free pre-K and early childhood programs for St. Louis City families. Includes Head Start, Parents as Teachers, and school readiness programs.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 345-2300</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 801 N 11th St, St. Louis, MO 63101</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.slps.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-12" data-resource-card data-category="education-access" data-verified="verified" data-lat="38.6292" data-lng="-90.2003">
+  <div class="resource-card-top">
+    <h3>St. Louis Public Library — Adult Education & Literacy</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Free GED preparation, ESL classes, digital literacy training, job readiness workshops, and homework help. Offers library cards regardless of housing status.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 241-2288</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1301 Olive St, St. Louis, MO 63103</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, multilingual resources available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.slpl.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-13" data-resource-card data-category="education-access" data-verified="verified" data-lat="38.6433" data-lng="-90.2337">
+  <div class="resource-card-top">
+    <h3>Urban League of Metropolitan St. Louis — Education & Workforce</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Workforce development, youth education programs, college prep, adult education, and career placement services. Operates Save Our Sons mentoring initiative.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 615-3600</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3701 Grandel Square, St. Louis, MO 63108</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.ulstl.com/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-14" data-resource-card data-category="education-access" data-verified="verified" data-lat="38.631" data-lng="-90.2005">
+  <div class="resource-card-top">
+    <h3>YMCA of Greater St. Louis — Youth Development</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>After-school tutoring, summer learning programs, early childhood education, swim safety, and youth leadership development across 24 locations.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 436-1177</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1528 Locust St, St. Louis, MO 63103</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.gwrymca.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-15" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="38.6351" data-lng="-90.2313">
   <div class="resource-card-top">
     <h3>Vision for Children at Risk</h3>
     <span class="badge badge-green">Verified</span>
@@ -190,7 +370,39 @@
   <a class="card-link" href="https://www.visionforchildren.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
 </article>
 
-<article class="resource-card" id="resource-5" data-resource-card data-category="social-community-context" data-verified="verified">
+<article class="resource-card" id="resource-16" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="38.6476" data-lng="-90.2066">
+  <div class="resource-card-top">
+    <h3>Grace Hill Settlement House</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Multi-service community organization providing Head Start, workforce training, health services, senior programs, and community building in North St. Louis.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Social & Community Context</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 539-9500</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 2600 Hadley St, St. Louis, MO 63106</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Bosnian, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.gracehill.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-17" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="38.6072" data-lng="-90.2312">
+  <div class="resource-card-top">
+    <h3>International Institute of St. Louis</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Resettlement, ESL, citizenship preparation, employment services, and cultural integration support for immigrant and refugee families.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Social & Community Context</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (314) 773-9090</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3401 Arsenal St, St. Louis, MO 63118</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> 40+ languages spoken by staff</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.iistl.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-18" data-resource-card data-category="social-community-context" data-verified="verified">
   <div class="resource-card-top">
     <h3>211 Helpline — United Way of Greater St. Louis</h3>
     <span class="badge badge-green">Verified</span>
@@ -213,18 +425,8 @@
 <section class="section closing-cta">
   <p class="eyebrow">Help us verify this directory</p>
   <h2>Are you a service provider in St. Louis?</h2>
-  <p>If you'd like your organization listed as a verified local resource, start a partner inquiry and select this metro.</p>
-  
-<div class="hero-actions centered" aria-label="Primary actions">
-  <a class="button primary" href="/find-help/">
-    Find Help
-    <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-  </a>
-  <a class="button secondary" href="/partners/">
-    Partner With Us
-    <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-  </a>
-</div>
+  <p>If you'd like your organization listed as a verified local resource, submit your information for review.</p>
+  <div class="primary-actions" style="justify-content:center"><a class="button primary" href="/submit-resource/">Submit Your Organization <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a> <a class="button secondary" href="/partners/">Partner With Us <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div>
 </section>
 
   </main>

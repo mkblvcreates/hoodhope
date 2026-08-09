@@ -161,18 +161,21 @@
   if (toolbar) {
     var categorySelect = toolbar.querySelector("[data-filter-category]");
     var languageSelect = toolbar.querySelector("[data-filter-verified]");
+    var searchInput = toolbar.querySelector("[data-filter-search]");
     var cards = document.querySelectorAll("[data-resource-card]");
     var emptyState = document.querySelector("[data-resource-empty]");
 
     function applyFilters() {
       var category = categorySelect ? categorySelect.value : "";
       var verifiedOnly = languageSelect ? languageSelect.value : "";
+      var query = searchInput ? searchInput.value.trim().toLowerCase() : "";
       var visibleCount = 0;
 
       cards.forEach((card) => {
         var matchesCategory = !category || card.getAttribute("data-category") === category;
         var matchesVerified = !verifiedOnly || card.getAttribute("data-verified") === verifiedOnly;
-        var visible = matchesCategory && matchesVerified;
+        var matchesSearch = !query || card.textContent.toLowerCase().indexOf(query) !== -1;
+        var visible = matchesCategory && matchesVerified && matchesSearch;
         card.style.display = visible ? "" : "none";
         if (visible) visibleCount += 1;
       });
@@ -195,6 +198,32 @@
 
     if (categorySelect) categorySelect.addEventListener("change", applyFilters);
     if (languageSelect) languageSelect.addEventListener("change", applyFilters);
+    if (searchInput) searchInput.addEventListener("input", applyFilters);
+  }
+
+  /* ---- Investor gate (Our Model page) ------------------------------------ */
+  var gateCheckbox = document.getElementById("investor-gate-agree");
+  var gateBtn = document.getElementById("investor-gate-btn");
+  var gatePrompt = document.getElementById("investor-gate-prompt");
+  var gatedContent = document.getElementById("investor-gated-content");
+
+  if (gateCheckbox && gateBtn && gatePrompt && gatedContent) {
+    if (sessionStorage.getItem("hh-investor-agreed") === "1") {
+      gatePrompt.setAttribute("hidden", "");
+      gatedContent.removeAttribute("hidden");
+    }
+
+    gateCheckbox.addEventListener("change", function () {
+      gateBtn.disabled = !gateCheckbox.checked;
+    });
+
+    gateBtn.addEventListener("click", function () {
+      if (!gateCheckbox.checked) return;
+      sessionStorage.setItem("hh-investor-agreed", "1");
+      gatePrompt.setAttribute("hidden", "");
+      gatedContent.removeAttribute("hidden");
+      gatedContent.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }
 
   /* ---- Donation amount presets ------------------------------------------- */
