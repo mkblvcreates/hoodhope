@@ -33,7 +33,7 @@ backend:
 # out before going live so editors use the real Git Gateway backend).
 # local_backend: true
 
-site_url: https://hoodhope.org
+site_url: https://hoodhope.netlify.app
 logo_url: /assets/img/logo-mark.png
 
 media_folder: "assets/img/uploads"

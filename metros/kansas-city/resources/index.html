@@ -91,7 +91,7 @@
       <label for="filter-category-kansas-city">Filter by category</label>
       <select id="filter-category-kansas-city" data-filter-category>
         <option value="">All categories</option>
-        <option value="social-community-context">Social & Community Context</option>
+        <option value="economic-stability">Economic Stability</option><option value="education-access">Education Access</option><option value="food-nutrition">Food & Nutrition</option><option value="health-care-access">Health Care Access</option><option value="neighborhood-environment">Neighborhood & Environment</option><option value="social-community-context">Social & Community Context</option>
       </select>
     </div>
     <div>
@@ -105,23 +105,333 @@
   </div>
 
   
+  <div class="view-toggle" role="tablist" aria-label="Directory view">
+    <button type="button" class="is-active" data-view-toggle="list">List</button>
+    <button type="button" data-view-toggle="map">Map</button>
+  </div>
+  <div class="resource-map" id="resource-map-kansas-city" data-resource-map data-map-points='[{"id":"resource-0","title":"Kansas City Housing Authority","lat":39.1043,"lng":-94.5825,"address":"920 Main St, Suite 701, Kansas City, MO 64105","category":"neighborhood-environment"},{"id":"resource-1","title":"Habitat for Humanity Kansas City","lat":39.0713,"lng":-94.5585,"address":"1423 E Linwood Blvd, Kansas City, MO 64109","category":"neighborhood-environment"},{"id":"resource-2","title":"Neighborhood Housing Services of Kansas City (NHS)","lat":39.0651,"lng":-94.5647,"address":"3516 Paseo Blvd, Kansas City, MO 64109","category":"neighborhood-environment"},{"id":"resource-3","title":"Westside Housing Organization","lat":39.0832,"lng":-94.5963,"address":"2515 Jarboe St, Kansas City, MO 64108","category":"neighborhood-environment"},{"id":"resource-4","title":"United Way of Greater Kansas City — Housing Stability","lat":39.0432,"lng":-94.5932,"address":"801 W 47th St, Suite 500, Kansas City, MO 64112","category":"economic-stability"},{"id":"resource-5","title":"Guadalupe Centers, Inc.","lat":39.0851,"lng":-94.5556,"address":"1015 Avenida Cesar E. Chavez, Kansas City, MO 64108","category":"economic-stability"},{"id":"resource-6","title":"Local Initiatives Support Corporation (LISC) Greater Kansas City","lat":39.1026,"lng":-94.581,"address":"818 Grand Blvd, Suite 1100, Kansas City, MO 64106","category":"economic-stability"},{"id":"resource-7","title":"Swope Health Services","lat":39.0518,"lng":-94.5275,"address":"3801 Blue Pkwy, Kansas City, MO 64130","category":"health-care-access"},{"id":"resource-8","title":"Samuel U. Rodgers Health Center","lat":39.1071,"lng":-94.5495,"address":"825 Euclid Ave, Kansas City, MO 64124","category":"health-care-access"},{"id":"resource-9","title":"ReDiscover — Behavioral Health Services","lat":38.9142,"lng":-94.3822,"address":"901 NE Independence Ave, Lee's Summit, MO 64086","category":"health-care-access"},{"id":"resource-10","title":"Harvesters — The Community Food Network","lat":39.0465,"lng":-94.5195,"address":"3801 Topping Ave, Kansas City, MO 64129","category":"food-nutrition"},{"id":"resource-11","title":"Kansas City Community Gardens","lat":39.0108,"lng":-94.5563,"address":"6917 Kensington Ave, Kansas City, MO 64132","category":"food-nutrition"},{"id":"resource-12","title":"Kansas City Public Schools — Early Childhood","lat":39.0698,"lng":-94.571,"address":"2901 Troost Ave, Kansas City, MO 64109","category":"education-access"},{"id":"resource-13","title":"Kansas City Public Library — Adult Education","lat":39.102,"lng":-94.5838,"address":"14 W 10th St, Kansas City, MO 64105","category":"education-access"},{"id":"resource-14","title":"Full Employment Council","lat":39.0868,"lng":-94.5647,"address":"1740 Paseo Blvd, Kansas City, MO 64108","category":"education-access"},{"id":"resource-15","title":"Urban League of Greater Kansas City","lat":39.0872,"lng":-94.5647,"address":"1710 Paseo Blvd, Kansas City, MO 64108","category":"education-access"},{"id":"resource-16","title":"Don Bosco Centers","lat":39.1058,"lng":-94.5462,"address":"526 Campbell St, Kansas City, MO 64106","category":"social-community-context"},{"id":"resource-17","title":"Reconciliation Services","lat":39.0668,"lng":-94.571,"address":"3101 Troost Ave, Kansas City, MO 64109","category":"social-community-context"},{"id":"resource-18","title":"Boys & Girls Clubs of Greater Kansas City","lat":39.0648,"lng":-94.5597,"address":"3200 Wayne Ave, Kansas City, MO 64109","category":"social-community-context"}]' hidden></div>
+  <p class="map-fallback-note">Map pin locations are best-estimate geocoding — confirm the exact address before visiting. Powered by OpenStreetMap contributors.</p>
 
   <div class="resource-list" data-resource-list>
     
-<article class="resource-card" id="resource-0" data-resource-card data-category="social-community-context" data-verified="verified">
+<article class="resource-card" id="resource-0" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="39.1043" data-lng="-94.5825">
   <div class="resource-card-top">
-    <h3>211 Helpline</h3>
+    <h3>Kansas City Housing Authority</h3>
     <span class="badge badge-green">Verified</span>
   </div>
-  <p>H.O.O.D. Hope has not yet licensed an operator in Kansas City. This universal helpline is provided in the meantime.</p>
+  <p>The public housing agency administering Section 8 / Housing Choice Vouchers, public housing, and mixed-income developments for Kansas City, MO.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 968-4100</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 920 Main St, Suite 701, Kansas City, MO 64105</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English (interpretation available)</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.hakc.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-1" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="39.0713" data-lng="-94.5585">
+  <div class="resource-card-top">
+    <h3>Habitat for Humanity Kansas City</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Builds and repairs affordable homes in the KC metro. Offers homeownership programs, Critical Home Repair, and ReStore operations.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 924-1096</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1423 E Linwood Blvd, Kansas City, MO 64109</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://habitatkc.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-2" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="39.0651" data-lng="-94.5647">
+  <div class="resource-card-top">
+    <h3>Neighborhood Housing Services of Kansas City (NHS)</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>NeighborWorks affiliate providing homebuyer education, down payment assistance, home repair loans, and foreclosure prevention counseling.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 531-3100</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3516 Paseo Blvd, Kansas City, MO 64109</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://nhskc.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-3" data-resource-card data-category="neighborhood-environment" data-verified="verified" data-lat="39.0832" data-lng="-94.5963">
+  <div class="resource-card-top">
+    <h3>Westside Housing Organization</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Community development organization focused on affordable housing, economic opportunity, and community building on the Westside.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Neighborhood & Environment</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 421-8048</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 2515 Jarboe St, Kansas City, MO 64108</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://westsidehousing.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-4" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="39.0432" data-lng="-94.5932">
+  <div class="resource-card-top">
+    <h3>United Way of Greater Kansas City — Housing Stability</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Coordinates housing stability initiatives, emergency rental assistance, and community resource navigation across the KC metro.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Economic Stability</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 472-4289</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 801 W 47th St, Suite 500, Kansas City, MO 64112</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.unitedwaygkc.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-5" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="39.0851" data-lng="-94.5556">
+  <div class="resource-card-top">
+    <h3>Guadalupe Centers, Inc.</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Comprehensive community services including workforce development, financial coaching, homeownership classes, early education, and charter schools.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Economic Stability</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 561-6885</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1015 Avenida Cesar E. Chavez, Kansas City, MO 64108</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.guadalupecenters.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-6" data-resource-card data-category="economic-stability" data-verified="verified" data-lat="39.1026" data-lng="-94.581">
+  <div class="resource-card-top">
+    <h3>Local Initiatives Support Corporation (LISC) Greater Kansas City</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Community development financial institution supporting affordable housing, economic development, and community safety in Kansas City's underinvested neighborhoods.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Economic Stability</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 753-0244</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 818 Grand Blvd, Suite 1100, Kansas City, MO 64106</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.lisc.org/kansas-city/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-7" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="39.0518" data-lng="-94.5275">
+  <div class="resource-card-top">
+    <h3>Swope Health Services</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Federally Qualified Health Center providing primary care, dental, behavioral health, pharmacy, and WIC services across multiple Kansas City locations.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Health Care Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 923-5800</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3801 Blue Pkwy, Kansas City, MO 64130</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.swopehealth.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-8" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="39.1071" data-lng="-94.5495">
+  <div class="resource-card-top">
+    <h3>Samuel U. Rodgers Health Center</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>FQHC providing primary care, dental, behavioral health, and pharmacy services to underserved communities in northeast Kansas City.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Health Care Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 474-4920</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 825 Euclid Ave, Kansas City, MO 64124</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish, Somali, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.rodgershealth.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-9" data-resource-card data-category="health-care-access" data-verified="verified" data-lat="38.9142" data-lng="-94.3822">
+  <div class="resource-card-top">
+    <h3>ReDiscover — Behavioral Health Services</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Comprehensive behavioral health services including substance use treatment, mental health counseling, crisis services, and supported housing.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Health Care Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 246-8000</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 901 NE Independence Ave, Lee's Summit, MO 64086</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.rediscovermh.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-10" data-resource-card data-category="food-nutrition" data-verified="verified" data-lat="39.0465" data-lng="-94.5195">
+  <div class="resource-card-top">
+    <h3>Harvesters — The Community Food Network</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Feeding America member food bank serving 26 counties in northwestern Missouri and northeastern Kansas. Distributes food through 760+ partner agencies.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Food & Nutrition</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 929-3000</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3801 Topping Ave, Kansas City, MO 64129</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.harvesters.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-11" data-resource-card data-category="food-nutrition" data-verified="verified" data-lat="39.0108" data-lng="-94.5563">
+  <div class="resource-card-top">
+    <h3>Kansas City Community Gardens</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Provides plants, seeds, and education to grow food. Operates community gardens and Giving Grove fruit tree orchards across KC neighborhoods.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Food & Nutrition</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 931-3877</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 6917 Kensington Ave, Kansas City, MO 64132</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://kccg.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-12" data-resource-card data-category="education-access" data-verified="verified" data-lat="39.0698" data-lng="-94.571">
+  <div class="resource-card-top">
+    <h3>Kansas City Public Schools — Early Childhood</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Free pre-K, early childhood, and family engagement programs. Includes Head Start partnerships and school readiness programs.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 418-7000</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 2901 Troost Ave, Kansas City, MO 64109</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.kcpublicschools.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-13" data-resource-card data-category="education-access" data-verified="verified" data-lat="39.102" data-lng="-94.5838">
+  <div class="resource-card-top">
+    <h3>Kansas City Public Library — Adult Education</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Free GED preparation, ESL classes, digital literacy, career services, and homework help. Library cards available regardless of housing status.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 701-3400</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 14 W 10th St, Kansas City, MO 64105</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, multilingual resources</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://kclibrary.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-14" data-resource-card data-category="education-access" data-verified="verified" data-lat="39.0868" data-lng="-94.5647">
+  <div class="resource-card-top">
+    <h3>Full Employment Council</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Workforce development, job training, career placement, youth employment programs, and employer connections for the KC metro area.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 471-2330</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1740 Paseo Blvd, Kansas City, MO 64108</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.feckc.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-15" data-resource-card data-category="education-access" data-verified="verified" data-lat="39.0872" data-lng="-94.5647">
+  <div class="resource-card-top">
+    <h3>Urban League of Greater Kansas City</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Workforce development, youth education, housing counseling, entrepreneurship training, and community advocacy for economic empowerment.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Education Access</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 471-0550</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 1710 Paseo Blvd, Kansas City, MO 64108</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.ulkc.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-16" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="39.1058" data-lng="-94.5462">
+  <div class="resource-card-top">
+    <h3>Don Bosco Centers</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Multi-service community center providing immigration legal services, ESL, citizenship classes, after-school programs, and family support.</p>
   <div class="resource-meta">
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Social & Community Context</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> Dial 2-1-1</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 691-2900</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 526 Campbell St, Kansas City, MO 64106</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish, Somali, Swahili, interpretation available</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://donbosco.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-17" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="39.0668" data-lng="-94.571">
+  <div class="resource-card-top">
+    <h3>Reconciliation Services</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Wraparound community services including free health clinic, food pantry, clothing, counseling, and case management on the Troost corridor.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Social & Community Context</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 931-4751</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3101 Troost Ave, Kansas City, MO 64109</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://reconciliationservices.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-18" data-resource-card data-category="social-community-context" data-verified="verified" data-lat="39.0648" data-lng="-94.5597">
+  <div class="resource-card-top">
+    <h3>Boys & Girls Clubs of Greater Kansas City</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>After-school programs, summer camps, mentoring, STEM education, and safe spaces for youth across 16 KC metro locations.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Social & Community Context</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> (816) 561-2255</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.3 7-11.7A7 7 0 0 0 5 9.3C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg> 3200 Wayne Ave, Kansas City, MO 64109</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> English, Spanish</span>
+    <span>Last verified 2026-08-09</span>
+  </div>
+  <a class="card-link" href="https://www.helpkckids.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</article>
+
+<article class="resource-card" id="resource-19" data-resource-card data-category="social-community-context" data-verified="verified">
+  <div class="resource-card-top">
+    <h3>211 Helpline — United Way of Greater Kansas City</h3>
+    <span class="badge badge-green">Verified</span>
+  </div>
+  <p>Free, confidential 24/7 helpline connecting residents to housing, food, utility, and crisis resources across the KC metro.</p>
+  <div class="resource-meta">
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9"/></svg> Social & Community Context</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.2l1.4 4.4-2 1.6a12 12 0 0 0 6.4 6.4l1.6-2 4.4 1.4V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 4Z"/></svg> Dial 2-1-1 or (866) 320-5764</span>
     
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7Z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 16.5h5"/></svg> Multilingual interpretation available</span>
-    <span>Last verified 2026-07-30</span>
+    <span>Last verified 2026-08-09</span>
   </div>
-  <a class="card-link" href="https://www.211.org/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+  <a class="card-link" href="https://uwgkc.myresourcedirectory.com/" target="_blank" rel="noopener">Visit resource <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
 </article>
   </div>
   <p class="resource-empty" data-resource-empty style="display:none">No resources match these filters yet.</p>

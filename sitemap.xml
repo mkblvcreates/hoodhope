@@ -41,6 +41,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hoodhope.org/metros/kansas-city/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hoodhope.org/metros/kansas-city/resources/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hoodhope.org/metros/st-louis/</loc>
     <priority>0.7</priority>
   </url>
@@ -70,14 +78,6 @@
   </url>
   <url>
     <loc>https://hoodhope.org/metros/detroit/resources/</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hoodhope.org/metros/kansas-city/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hoodhope.org/metros/kansas-city/resources/</loc>
     <priority>0.6</priority>
   </url>
   <url>
