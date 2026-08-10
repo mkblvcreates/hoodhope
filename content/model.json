@@ -1,35 +1,233 @@
 {
-  "positioning": {
-    "eyebrow": "Not a partnership. A scalable operating system.",
-    "title": "A National Housing Platform",
-    "pillars": [
-      { "name": "Guardrails", "icon": "shield", "description": "Program fidelity and compliance standards" },
-      { "name": "Licenses", "icon": "doc", "description": "Controlled, revocable implementation rights" },
-      { "name": "Replaceable Operators", "icon": "check", "description": "Accountability through performance metrics" },
-      { "name": "Protected IP", "icon": "shield", "description": "Proprietary methodology and frameworks" },
-      { "name": "Multi-Capital", "icon": "chart", "description": "Diverse funding source compatibility" }
-    ],
-    "quote": "Prevents erasure. Preserves legacy. Enables scale beyond our lifetimes.",
-    "reach": "Replicable across 150+ metros"
-  },
-  "continuum": {
-    "eyebrow": "A proprietary Continuum of Care model",
-    "title": "The 5-Stage Path to Homeownership",
-    "intro": "A structured, non-arbitrary progression. Each stage has clear eligibility, documented progression, and non-arbitrary movement.",
-    "stages": [
-      { "stage": 0, "name": "Crisis / Pre-Housing", "focus": "Readiness", "description": "Partner-delivered services. Homeless or unstably housed. No housing yet.", "detail": "Focus on tracking readiness benchmarks." },
-      { "stage": 1, "name": "Stabilization Housing", "focus": "Income + Compliance", "description": "Program-controlled units. Case management. No lease obligation.", "detail": "Focus on income and compliance." },
-      { "stage": 2, "name": "Rent-Ready", "focus": "Budgeting + Behavior", "description": "Transitional lease. Repair participation. Benchmarks tracked.", "detail": "Focus on budgeting and behavior benchmarks." },
-      { "stage": 3, "name": "Path to Homeownership", "focus": "Escrowed Equity", "description": "Lease-Option / Agreement for Deed. Credit coaching. Work-for-equity.", "detail": "Focus on credit coaching and escrowed equity." },
-      { "stage": 4, "name": "Ownership / Exit", "focus": "Community Reinvestment", "description": "Mortgage or payoff. Alumni tracking. Full independence.", "detail": "Focus on community reinvestment." }
-    ],
-    "closingQuote": "From Crisis to Keys — a structured, non-arbitrary progression."
+  "flagshipPartner": {
+    "eyebrow": "IMPLEMENTATION PARTNER PROFILE — ST. LOUIS FLAGSHIP",
+    "name": "Built for Local Leadership",
+    "blurb": "Hood Hope is seeking an established St. Louis implementation partner with the community trust, operational infrastructure, and family-centered experience necessary to help deliver and evaluate the flagship model.",
+    "stats": [],
+    "website": "",
+    "phone": ""
   },
   "wellness": {
     "eyebrow": "Integrated Wellness Approach",
     "title": "Housing is Healthcare",
     "methodologyName": "The WEL9 Methodology",
     "sdohNote": "The WEL9 Methodology is built on the same five Social Determinants of Health domains used across the housing and healthcare fields — connecting our housing model to the broader evidence base funders and health systems already recognize."
+  },
+  "roi": {
+    "eyebrow": "Measuring value beyond the balance sheet",
+    "title": "Return on Investment",
+    "metrics": [
+      {
+        "label": "Financial ROI",
+        "value": "69%",
+        "detail": "$1.95M Net Return",
+        "note": "Direct financial return based on operational efficiency, asset appreciation, and reduced vacancy costs over the 36-month pilot."
+      },
+      {
+        "label": "Social ROI",
+        "value": "1 : 3.25",
+        "detail": "$3.25 Value per $1",
+        "note": "Quantifiable social value generated through reduced public system utilization (emergency shelter, ER visits, justice system)."
+      },
+      {
+        "label": "Wealth Creation",
+        "value": "$12.5M",
+        "detail": "10-Year Projection",
+        "note": "Cumulative equity and asset value accumulated by 69 families successfully transitioning to homeownership."
+      }
+    ],
+    "closingLine": "A Dual-Bottom Line Approach"
+  },
+  "callToAction": {
+    "title": "Partner with us to transform housing in America.",
+    "tracks": [
+      {
+        "name": "Invest",
+        "description": "Fully fund the $2.85M St. Louis Flagship Pilot to demonstrate the model's efficacy."
+      },
+      {
+        "name": "Validate",
+        "description": "Prove the outcomes of the WEL9 methodology and the Path to Homeownership ladder."
+      },
+      {
+        "name": "Scale",
+        "description": "Establish the operational blueprint for expansion to Wichita and 150+ metros."
+      }
+    ],
+    "closingLine": "Join the mission."
+  },
+  "scalability": {
+    "eyebrow": "From pilot to platform",
+    "title": "National Scalability",
+    "assetFlow": {
+      "title": "The Engine of Scale — Asset Flow Model",
+      "steps": [
+        "Capital → Foundations / Government",
+        "Property Trusts → Asset Protection",
+        "Housing Units → Program Inventory",
+        "Residents → Homeowners"
+      ],
+      "note": "Separating capital flow from operations enables rapid scaling while maintaining program compliance."
+    },
+    "phases": [
+      {
+        "phase": 1,
+        "name": "St. Louis Flagship",
+        "status": "Active",
+        "description": "Proof of Concept. Establishing the model with Vision for Children at Risk. 115 families, $2.8M investment, proving the WEL9 methodology."
+      },
+      {
+        "phase": 2,
+        "name": "Regional Expansion",
+        "status": "Next",
+        "description": "Replication Model. Launching in Wichita, KS. Testing the portability of the licensing framework and operational guardrails."
+      },
+      {
+        "phase": 3,
+        "name": "National Platform",
+        "status": "Roadmap",
+        "description": "Systemic Scale. Rolling out to 150 metros via the H.O.O.D. Hope licensing model. Decentralized operations, centralized fidelity."
+      }
+    ]
+  },
+  "continuum": {
+    "eyebrow": "A proprietary Continuum of Care model",
+    "title": "The 5-Stage Path to Homeownership",
+    "intro": "A structured, non-arbitrary progression. Each stage has clear eligibility, documented progression, and non-arbitrary movement.",
+    "stages": [
+      {
+        "stage": 0,
+        "name": "Crisis / Pre-Housing",
+        "focus": "Readiness",
+        "description": "Partner-delivered services. Homeless or unstably housed. No housing yet.",
+        "detail": "Focus on tracking readiness benchmarks."
+      },
+      {
+        "stage": 1,
+        "name": "Stabilization Housing",
+        "focus": "Income + Compliance",
+        "description": "Program-controlled units. Case management. No lease obligation.",
+        "detail": "Focus on income and compliance."
+      },
+      {
+        "stage": 2,
+        "name": "Rent-Ready",
+        "focus": "Budgeting + Behavior",
+        "description": "Transitional lease. Repair participation. Benchmarks tracked.",
+        "detail": "Focus on budgeting and behavior benchmarks."
+      },
+      {
+        "stage": 3,
+        "name": "Path to Homeownership",
+        "focus": "Escrowed Equity",
+        "description": "Lease-Option / Agreement for Deed. Credit coaching. Work-for-equity.",
+        "detail": "Focus on credit coaching and escrowed equity."
+      },
+      {
+        "stage": 4,
+        "name": "Ownership / Exit",
+        "focus": "Community Reinvestment",
+        "description": "Mortgage or payoff. Alumni tracking. Full independence.",
+        "detail": "Focus on community reinvestment."
+      }
+    ],
+    "closingQuote": "From Crisis to Keys — a structured, non-arbitrary progression."
+  },
+  "marketOpportunity": {
+    "eyebrow": "The urgency of now",
+    "title": "St. Louis Market Opportunity",
+    "nationalContext": {
+      "value": "7.4M",
+      "label": "Shortage of affordable and available rental homes for extremely low-income renters across the US."
+    },
+    "localCrisis": {
+      "value": "47,000+",
+      "label": "Extremely Low Income (ELI) households in the St. Louis Metro area lacking affordable housing."
+    },
+    "supplyGap": {
+      "value": "28/100",
+      "label": "Only 28 affordable units exist for every 100 ELI households in St. Louis."
+    },
+    "focusAreas": {
+      "value": "North City & East St. Louis",
+      "label": "Neighborhoods with high vacancy rates but immense revitalization potential."
+    }
+  },
+  "positioning": {
+    "eyebrow": "Beyond collaboration. A scalable operating system.",
+    "title": "A Housing Platform Architected For National Scale",
+    "pillars": [
+      {
+        "name": "Guardrails",
+        "icon": "shield",
+        "description": "Program fidelity and compliance standards"
+      },
+      {
+        "name": "Licenses",
+        "icon": "doc",
+        "description": "Controlled, revocable implementation rights"
+      },
+      {
+        "name": "Replaceable Operators",
+        "icon": "check",
+        "description": "Accountability through performance metrics"
+      },
+      {
+        "name": "Proprietary Frameworks",
+        "icon": "shield",
+        "description": "Proprietary methodology and frameworks"
+      },
+      {
+        "name": "Multi-Capital",
+        "icon": "chart",
+        "description": "Diverse funding source compatibility"
+      }
+    ],
+    "quote": "Prevents erasure. Preserves legacy. Enables scale beyond our lifetimes.",
+    "reach": "Designed for replication across 150+ U.S. Metros"
+  },
+  "funding": {
+    "budgetAllocation": [
+      {
+        "label": "Homeownership Services",
+        "note": "Academy, Down Payment Assistance, Credit Repair",
+        "pct": 40,
+        "amount": "$2,460,000"
+      },
+      {
+        "label": "Personnel",
+        "note": "Program Staff, Case Managers, Leadership",
+        "pct": 23,
+        "amount": "$1,387,500"
+      },
+      {
+        "label": "Housing Operations",
+        "note": "Unit Maintenance, Utilities, Property Management",
+        "pct": 12,
+        "amount": "$917,250"
+      },
+      {
+        "label": "Supportive Services",
+        "note": "Wraparound Care, Health, Education",
+        "pct": 12,
+        "amount": "$733,800"
+      },
+      {
+        "label": "Admin & Overhead",
+        "note": "Compliance, Reporting, General Operations",
+        "pct": 10,
+        "amount": "$616,450"
+      }
+    ],
+    "totalBudget": "$6.12M",
+    "eyebrow": "36-month pilot launch",
+    "note": "Figures reflect the 36-month St. Louis Flagship pilot pro forma budget, not audited historical financials. See Reports & Financial Transparency for audit status.",
+    "familiesServed": "115",
+    "title": "Funding Request",
+    "ask": "$2,847,500",
+    "localMatch": "$50,000",
+    "localMatchLabel": "Committed Local Match — To Be Determined",
+    "askLabel": "St. Louis Flagship Implementation"
   },
   "licensing": {
     "eyebrow": "Structure for scale & fidelity",
@@ -68,91 +266,31 @@
       }
     ]
   },
-  "flagshipPartner": {
-    "eyebrow": "Strategic selection — St. Louis Flagship Implementer",
-    "name": "Vision for Children at Risk",
-    "blurb": "We selected a partner with the operational capacity, community trust, and mission alignment required to execute a national flagship pilot.",
-    "stats": [
-      { "value": "35+", "label": "Years of Service", "note": "Decades of established trust serving vulnerable families in St. Louis." },
-      { "value": "1000+", "label": "Families Served", "note": "Deep community relationships and proven track record of impact." },
-      { "value": "100%", "label": "Mission Aligned", "note": "Adding housing to existing wraparound services for holistic impact." }
-    ],
-    "website": "https://www.visionforchildren.org/",
-    "phone": "(314) 534-6015"
-  },
-  "marketOpportunity": {
-    "eyebrow": "The urgency of now",
-    "title": "St. Louis Market Opportunity",
-    "nationalContext": { "value": "7.4M", "label": "Shortage of affordable and available rental homes for extremely low-income renters across the US." },
-    "localCrisis": { "value": "47,000+", "label": "Extremely Low Income (ELI) households in the St. Louis Metro area lacking affordable housing." },
-    "supplyGap": { "value": "28/100", "label": "Only 28 affordable units exist for every 100 ELI households in St. Louis." },
-    "focusAreas": { "value": "North City & East St. Louis", "label": "Neighborhoods with high vacancy rates but immense revitalization potential." }
-  },
   "projectedImpact": {
     "eyebrow": "36-month launch targets",
     "title": "Projected Impact",
     "closingQuote": "Creating generational change, not just temporary shelter.",
     "stats": [
-      { "value": "115", "label": "Families Served", "note": "Direct participants in the Sustainable Wellness Housing program over the 3-year pilot period." },
-      { "value": "85%", "label": "Housing Retention", "note": "Participants maintaining stable housing for 12+ months, significantly exceeding national averages." },
-      { "value": "60%", "label": "Homeownership Transition", "note": "Families successfully moving from rental to the path of ownership — our core differentiator." },
-      { "value": "$5.2M", "label": "Community Investment", "note": "Total economic impact generated through housing stability, property revitalization, and reduced public costs." }
+      {
+        "value": "115",
+        "label": "Families Served",
+        "note": "Direct participants in the Sustainable Wellness Housing program over the 3-year pilot period."
+      },
+      {
+        "value": "85%",
+        "label": "Housing Retention",
+        "note": "Participants maintaining stable housing for 12+ months, significantly exceeding national averages."
+      },
+      {
+        "value": "60%",
+        "label": "Homeownership Transition",
+        "note": "Families successfully moving from rental to the path of ownership — our core differentiator."
+      },
+      {
+        "value": "$5.2M",
+        "label": "Community Investment",
+        "note": "Total economic impact generated through housing stability, property revitalization, and reduced public costs."
+      }
     ]
-  },
-  "funding": {
-    "eyebrow": "36-month pilot launch",
-    "title": "Funding Request",
-    "ask": "$2,847,500",
-    "askLabel": "St. Louis Flagship Implementation",
-    "localMatch": "$50,000",
-    "localMatchLabel": "Committed Local Match — Vision for Children at Risk",
-    "familiesServed": "115",
-    "totalBudget": "$6.12M",
-    "budgetAllocation": [
-      { "label": "Homeownership Services", "note": "Academy, Down Payment Assistance, Credit Repair", "pct": 40, "amount": "$2,460,000" },
-      { "label": "Personnel", "note": "Program Staff, Case Managers, Leadership", "pct": 23, "amount": "$1,387,500" },
-      { "label": "Housing Operations", "note": "Unit Maintenance, Utilities, Property Management", "pct": 12, "amount": "$917,250" },
-      { "label": "Supportive Services", "note": "Wraparound Care, Health, Education", "pct": 12, "amount": "$733,800" },
-      { "label": "Admin & Overhead", "note": "Compliance, Reporting, General Operations", "pct": 10, "amount": "$616,450" }
-    ],
-    "note": "Figures reflect the 36-month St. Louis Flagship pilot pro forma budget, not audited historical financials. See Reports & Financial Transparency for audit status."
-  },
-  "roi": {
-    "eyebrow": "Measuring value beyond the balance sheet",
-    "title": "Return on Investment",
-    "metrics": [
-      { "label": "Financial ROI", "value": "69%", "detail": "$1.95M Net Return", "note": "Direct financial return based on operational efficiency, asset appreciation, and reduced vacancy costs over the 36-month pilot." },
-      { "label": "Social ROI", "value": "1 : 3.25", "detail": "$3.25 Value per $1", "note": "Quantifiable social value generated through reduced public system utilization (emergency shelter, ER visits, justice system)." },
-      { "label": "Wealth Creation", "value": "$12.5M", "detail": "10-Year Projection", "note": "Cumulative equity and asset value accumulated by 69 families successfully transitioning to homeownership." }
-    ],
-    "closingLine": "A Dual-Bottom Line Approach"
-  },
-  "scalability": {
-    "eyebrow": "From pilot to platform",
-    "title": "National Scalability",
-    "assetFlow": {
-      "title": "The Engine of Scale — Asset Flow Model",
-      "steps": [
-        "Capital → Foundations / Government",
-        "Property Trusts → Asset Protection",
-        "Housing Units → Program Inventory",
-        "Residents → Homeowners"
-      ],
-      "note": "Separating capital flow from operations enables rapid scaling while maintaining program compliance."
-    },
-    "phases": [
-      { "phase": 1, "name": "St. Louis Flagship", "status": "Active", "description": "Proof of Concept. Establishing the model with Vision for Children at Risk. 115 families, $2.8M investment, proving the WEL9 methodology." },
-      { "phase": 2, "name": "Regional Expansion", "status": "Next", "description": "Replication Model. Launching in Wichita, KS. Testing the portability of the licensing framework and operational guardrails." },
-      { "phase": 3, "name": "National Platform", "status": "Roadmap", "description": "Systemic Scale. Rolling out to 150 metros via the H.O.O.D. Hope licensing model. Decentralized operations, centralized fidelity." }
-    ]
-  },
-  "callToAction": {
-    "title": "Partner with us to transform housing in America.",
-    "tracks": [
-      { "name": "Invest", "description": "Fully fund the $2.85M St. Louis Flagship Pilot to demonstrate the model's efficacy." },
-      { "name": "Validate", "description": "Prove the outcomes of the WEL9 methodology and the Path to Homeownership ladder." },
-      { "name": "Scale", "description": "Establish the operational blueprint for expansion to Wichita and 150+ metros." }
-    ],
-    "closingLine": "Join the mission."
   }
 }
